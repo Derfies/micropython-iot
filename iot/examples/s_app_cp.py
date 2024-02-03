@@ -21,6 +21,9 @@ try:
 except ImportError:
     import ujson as json
 
+# TODO: Windows platform only.
+from iot import poll
+poll.install()
 from iot import server
 from iot.examples.local import PORT, TIMEOUT
 

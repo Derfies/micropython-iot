@@ -12,8 +12,14 @@
 import gc
 
 gc.collect()
-import usocket as socket
-import uasyncio as asyncio
+try:
+    import usocket as socket
+except:
+    import socket
+try:
+    import uasyncio as asyncio
+except:
+    import asyncio
 
 gc.collect()
 from sys import platform

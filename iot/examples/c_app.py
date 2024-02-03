@@ -7,7 +7,10 @@
 # and release builds later than V1.12
 
 import gc
-import uasyncio as asyncio
+try:
+    import uasyncio as asyncio
+except:
+    import asyncio
 gc.collect()
 from iot import client
 gc.collect()
